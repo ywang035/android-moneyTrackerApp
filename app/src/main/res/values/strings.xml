@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MoneyApp</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="adding_tab_label1">EXPENSE</string>
+    <string name="adding_tab_label2">INCOME</string>
+    <string name="icon_food_label">FOOD</string>
+    <string name="icon_grocery_label">GROCERY</string>
+    <string name="icon_transport_label">TRANSPORT</string>
+    <string name="icon_cash_label">CASH</string>
+    <string name="icon_atm_label">ATM</string>
+
+
+</resources>

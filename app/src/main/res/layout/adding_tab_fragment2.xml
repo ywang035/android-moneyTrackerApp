@@ -1,0 +1,57 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context=".AddingTabFragment2">-->
+
+    <!--&lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;-->
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:text="@string/hello_blank_fragment" />-->
+
+<!--</FrameLayout>-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddingTabFragment2">
+
+
+    <ImageView
+        android:id="@+id/xml_icon_cash"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="220dp"
+        android:src="@drawable/icon_cash_yellow" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/icon_cash_label"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="280dp"/>
+
+    <ImageView
+        android:id="@+id/xml_icon_atm"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="220dp"
+        android:src="@drawable/icon_atm_gray" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/icon_atm_label"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="280dp"/>
+
+
+
+
+</RelativeLayout>
