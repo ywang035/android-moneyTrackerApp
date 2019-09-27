@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause(){
         super.onPause();
-        writeFile(recordList, getApplicationContext());
+        writeFile(recordList, getApplicationContext());  // call write function
     }
 
     // write to local file
