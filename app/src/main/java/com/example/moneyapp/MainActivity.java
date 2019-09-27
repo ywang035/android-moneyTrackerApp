@@ -1,9 +1,8 @@
 package com.example.moneyapp;
 
+import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,19 +11,21 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.LinkedList;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final int TEXT_REQUEST = 1;
-    private static final String LIST_KEY = "rList";
+
     private final LinkedList<String> recordList = new LinkedList<>();
 
     private RecyclerView recyclerView;
-
-    private SharedPreferences mPreferences;
-    private String sharedPrefFile = "com.example.moneyapp";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +35,11 @@ public class MainActivity extends AppCompatActivity {
 //        Toolbar toolbar = findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
 
-//        readFile();
+        try {
+            readFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         // Get a handle to the RecyclerView.
         recyclerView = findViewById(R.id.recyclerview);
@@ -81,16 +86,9 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == TEXT_REQUEST) {
             if (resultCode == RESULT_OK) {
-                String returnedMessage =
-                        data.getStringExtra(AddingActivity.EXTRA_REPLY);
-
-
+                String returnedMessage = data.getStringExtra(AddingActivity.EXTRA_REPLY);
                 // get list size and add received input to record list
-                int recordListSize = recordList.size();
                 recordList.addFirst(returnedMessage);
-
-                System.out.println("list @ adding: " + recordList);
-
                 // Notify the adapter, that the data has changed.
                 recyclerView.getAdapter().notifyItemInserted(0);
                 // Scroll to the bottom.
@@ -99,36 +97,48 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // write to internal storage
     @Override
     protected void onPause(){
         super.onPause();
-//        SharedPreferences.Editor preferencesEditor = mPreferences.edit();
-//        preferencesEditor.putString(LIST_KEY, String.valueOf(recordList));
-//        preferencesEditor.apply();
+        writeFile(recordList, getApplicationContext());
     }
 
-    // read shared preference (saved data)
-    private void readFile(){
-
-        mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
-
-        String str = mPreferences.getString(LIST_KEY, null);
-        System.out.println("read in: " + str);
-        System.out.println("read in length: " + str.length());
-
-        if(str.length()!=2){
-            // remove [ and ] from reading
-
-            String recordIn = mPreferences.getString(LIST_KEY,null);
-            String recordEdit = recordIn.substring(1, recordIn.length()-1);
-
-            String[] arrOfStr = recordEdit.split(", ");
-
-            for (String a : arrOfStr){
-                    recordList.addLast(a);
+    // write to local file
+    private void writeFile(LinkedList<String> data, Context context){
+        try {
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput("config.txt", Context.MODE_PRIVATE));
+            for (int i = 0; i < data.size(); i++) {
+                outputStreamWriter.write(data.get(i)+"\n");
             }
-//            System.out.println("list @ reading: " + recordList);
+            outputStreamWriter.close();
+        }
+        catch (IOException e) {
+            System.out.println("Exception File write failed: " + e.toString());
+        }
+    }
+
+    // read from local file
+    private void readFile() throws IOException {
+        try {
+            InputStream inputStream = getApplicationContext().openFileInput("config.txt");
+
+            if ( inputStream != null ) {
+
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                String readString = "";
+
+                while ( (readString = bufferedReader.readLine()) != null ) {
+                    recordList.addLast(readString);
+                }
+                inputStream.close();
+            }
+
+        }
+        catch (FileNotFoundException e) {
+            System.out.println("file not found");
+        } catch (IOException e) {
+            System.out.println("file cant read");
         }
     }
 }

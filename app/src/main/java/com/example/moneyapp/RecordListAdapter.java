@@ -95,7 +95,7 @@ public class RecordListAdapter extends RecyclerView.Adapter<RecordListAdapter.Re
 
         String[] arrOfCurrent = mCurrent.split("---");
 
-        System.out.println("position is: " + position + " , record is: " + mCurrent);
+//        System.out.println("position is: " + position + " , record is: " + mCurrent);
 
 
         recordViewHolder.recodCard_date.setText(arrOfCurrent[4]);
