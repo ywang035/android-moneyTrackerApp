@@ -1,6 +1,6 @@
 # Welcome to MoneyApp
 
-This is my first Android project, which is a basic expense tracking application. I am a personal who likes to track
+This is my first Android project, which is a basic expense tracking application. I am a person who likes to track
 every spending coming out of my cards. Hence I tried to build one myself and I had a lot of fun with it.
 
 ## Screenshots
