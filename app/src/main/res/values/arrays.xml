@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="asset_type">
+
+        <item>Debit Card</item>
+        <item>Credit Card</item>
+        <item>Digital Payment</item>
+        <item>Account</item>
+
+    </string-array>
+</resources>

@@ -1,0 +1,403 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ChartActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!-- Doughnut chart starts here -->
+    <!--<android.support.constraint.ConstraintLayout-->
+        <!--android:id="@+id/constraintLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--&gt;-->
+
+
+        <!--&lt;!&ndash; ProgressBar that represents a chart slice, where "android:progress" is the % value of the slice &ndash;&gt;-->
+        <!--&lt;!&ndash;<ProgressBar&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/stats_progressbar1"&ndash;&gt;-->
+            <!--&lt;!&ndash;style="?android:attr/progressBarStyleHorizontal"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="400dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="400dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_marginStart="8dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_marginTop="8dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_marginEnd="8dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_marginBottom="8dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:indeterminate="false"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:max="100"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:progress="75"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:progressDrawable="@drawable/stats_progress_1"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintHorizontal_bias="0.505"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+        <!---->
+
+    <!--</android.support.constraint.ConstraintLayout>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/expense_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Expense: "
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="15dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/expense_restaurant_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_restaurant_yellow"
+                        android:gravity="center"
+                        android:text="  Restaurant"/>
+                    <TextView
+                        android:id="@+id/expense_restaurant_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="$0.0"/>
+                </LinearLayout>
+                <ProgressBar
+                    android:id="@+id/expense_restaurant_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="5dp"
+                    android:scaleY="2"
+                    android:max="100"
+                    android:progress="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/expense_grocery_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_grocery_yellow"
+                        android:gravity="center"
+                        android:text="  Grocery"/>
+                    <TextView
+                        android:id="@+id/expense_grocery_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="$0.0"/>
+                </LinearLayout>
+                <ProgressBar
+                    android:id="@+id/expense_grocery_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="5dp"
+                    android:scaleY="2"
+                    android:max="100"
+                    android:progress="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/expense_transport_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_transport_yellow"
+                        android:gravity="center"
+                        android:text="  Transport"/>
+                    <TextView
+                        android:id="@+id/expense_transport_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="$0.0"/>
+                </LinearLayout>
+                <ProgressBar
+                    android:id="@+id/expense_transport_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="5dp"
+                    android:scaleY="2"
+                    android:max="100"
+                    android:progress="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/expense_cash_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_cash_yellow"
+                        android:gravity="center"
+                        android:text="  Cash"/>
+                    <TextView
+                        android:id="@+id/expense_cash_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="$0.0"/>
+                </LinearLayout>
+                <ProgressBar
+                    android:id="@+id/expense_cash_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="5dp"
+                    android:scaleY="2"
+                    android:max="100"
+                    android:progress="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/expense_entertain_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_entertain_yellow"
+                        android:gravity="center"
+                        android:text="  Entertain"/>
+                    <TextView
+                        android:id="@+id/expense_entertain_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="$0.0"/>
+                </LinearLayout>
+                <ProgressBar
+                    android:id="@+id/expense_entertain_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="5dp"
+                    android:scaleY="2"
+                    android:max="100"
+                    android:progress="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/expense_invest_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_invest_yellow"
+                        android:gravity="center"
+                        android:text="  Invest"/>
+                    <TextView
+                        android:id="@+id/expense_invest_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="$0.0"/>
+                </LinearLayout>
+                <ProgressBar
+                    android:id="@+id/expense_invest_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="5dp"
+                    android:scaleY="2"
+                    android:max="100"
+                    android:progress="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/expense_housing_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_housing_yellow"
+                        android:gravity="center"
+                        android:text="  Housing"/>
+                    <TextView
+                        android:id="@+id/expense_housing_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="$0.0"/>
+                </LinearLayout>
+                <ProgressBar
+                    android:id="@+id/expense_housing_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="5dp"
+                    android:scaleY="2"
+                    android:max="100"
+                    android:progress="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/expense_special_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_special_yellow"
+                        android:gravity="center"
+                        android:text="  Special"/>
+                    <TextView
+                        android:id="@+id/expense_special_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="$0.0"/>
+                </LinearLayout>
+                <ProgressBar
+                    android:id="@+id/expense_special_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="5dp"
+                    android:scaleY="2"
+                    android:max="100"
+                    android:progress="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

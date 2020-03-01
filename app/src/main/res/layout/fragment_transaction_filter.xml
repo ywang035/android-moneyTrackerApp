@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleX="0.9"
+        android:scaleY="0.9"
+        android:orientation="vertical">
+
+        <!--First Row-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Expense Category" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/transaction_filter_checkbox_expense_restaurant"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Restaurant"/>
+
+                <CheckBox
+                    android:id="@+id/transaction_filter_checkbox_expense_grocery"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Grocery"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <CheckBox
+                        android:id="@+id/transaction_filter_checkbox_expense_transport"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Transport"/>
+
+                    <CheckBox
+                        android:id="@+id/transaction_filter_checkbox_expense_cash"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Cash"/>
+
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/transaction_filter_checkbox_expense_entertain"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Entertain"/>
+
+                    <CheckBox
+                        android:id="@+id/transaction_filter_checkbox_expense_invest"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Invest"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/transaction_filter_checkbox_expense_housing"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Housing"/>
+
+                    <CheckBox
+                        android:id="@+id/transaction_filter_checkbox_expense_special"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Special"/>
+                </TableRow>
+
+
+            </TableLayout>
+        </LinearLayout>
+
+
+        <!--Second Row-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Income Category" />
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/transaction_filter_checkbox_income_salary"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Salary"/>
+
+                    <CheckBox
+                        android:id="@+id/transaction_filter_checkbox_income_invest"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Invest"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/transaction_filter_checkbox_income_cash"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Cash"/>
+
+                    <CheckBox
+                        android:id="@+id/transaction_filter_checkbox_income_split"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Split"/>
+
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/transaction_filter_checkbox_income_special"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Special"/>
+
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <!--Third Row-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Other Transaction" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/transaction_filter_checkbox_assetTransfer"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Asset Transfer"/>
+
+                    <CheckBox
+                        android:id="@+id/transaction_filter_checkbox_assetEdit"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Asset Edit"/>
+                </TableRow>
+
+            </TableLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+</android.widget.RelativeLayout>

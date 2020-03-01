@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    tools:context=".Activity.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:elevation="1dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Book 1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </android.support.v7.widget.Toolbar>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/toolbar_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:drawableEnd="@drawable/ic_dropdown_white"
+                        android:text="Month-to-Date"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15dp"
+                        android:clickable="true"
+                        android:onClick="showMonthSelectionFragment"
+                         />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/toolbar_net"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-5dp"
+                        android:text="$0.00"
+                        android:textColor="#FFFFFF"
+                        android:textSize="35dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                         />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="Expense"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="Income"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-2dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/toolbar_out"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="$0.00"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                         />
+
+                    <TextView
+                        android:id="@+id/toolbar_in"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="$0.00"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                         />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <Button
+        android:id="@+id/resetFilter_button"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:onClick="resetFilterSelection"
+        android:background="@color/colorAccent"
+        android:text="Remove Filter"
+        android:textColor="@android:color/white"
+        android:textSize="10dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        android:layout_marginTop="205dp"
+        />
+
+    <include layout="@layout/recyclerview_transaction" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="navToAddingActivity"
+        android:src="@drawable/ic_round_add" />
+
+</android.support.design.widget.CoordinatorLayout>

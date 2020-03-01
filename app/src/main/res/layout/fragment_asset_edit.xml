@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:text="Date"/>
+
+        <Button
+            android:id="@+id/dialogFragment_editAsset_datePickerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:drawablePadding="20dp"
+            android:gravity="left|center_vertical"
+            android:onClick="showDatePicker" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asset Name:"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"/>
+
+
+        <EditText
+            android:id="@+id/dialogFragment_editAsset_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:inputType="text"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Asset Type"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            />
+
+
+        <TextView
+            android:id="@+id/dialogFragment_editAsset_assetType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp" />
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asset / Credit Card Balance:"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp">
+
+            <!--<TextView-->
+                <!--android:id="@+id/dialogFragment_editAsset_newAmountSign"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginRight="2dp"-->
+                <!--android:text="-"-->
+                <!--android:textSize="20dp"/>-->
+
+            <EditText
+                android:id="@+id/dialogFragment_editAsset_newAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="enter new amount"
+                android:inputType="numberDecimal|numberSigned"
+                />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/dialogFragment_assetEdit_creditCardLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Credit Card Limit:"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/dialogFragment_editAsset_newLimit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:hint="enter new amount"
+                android:inputType="numberDecimal"
+                />
+
+        </LinearLayout>
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/dialogFragment_editAsset_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:hint="note of transfer"
+            android:inputType="text"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/dialogFragment_editAsset_ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="Ok"
+                android:textColor="@color/colorAccent" />
+
+            <Button
+                android:id="@+id/dialogFragment_editAsset_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="Cancel"
+                android:textColor="@color/colorAccent" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</android.widget.RelativeLayout>

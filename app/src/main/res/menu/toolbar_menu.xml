@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.moneyapp.Activity.MainActivity">
+
+    <item
+        android:id="@+id/toolbar_menu_filter"
+        android:orderInCategory="300"
+        android:title="filter"
+        android:icon="@drawable/icon_filter_white_24dp"
+        app:showAsAction="always"
+        />
+
+
+    <item
+        android:id="@+id/toolbar_menu_chart"
+        android:orderInCategory="300"
+        android:title="chart"
+        android:icon="@drawable/icon_chart_white_24dp"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/toolbar_menu_asset"
+        android:orderInCategory="300"
+        android:title="asset"
+        android:icon="@drawable/icon_asset_white_24dp"
+        app:showAsAction="always"
+        />
+
+</menu>

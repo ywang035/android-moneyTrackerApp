@@ -4,11 +4,33 @@
 
     <string name="adding_tab_label1">EXPENSE</string>
     <string name="adding_tab_label2">INCOME</string>
-    <string name="icon_food_label">FOOD</string>
-    <string name="icon_grocery_label">GROCERY</string>
-    <string name="icon_transport_label">TRANSPORT</string>
-    <string name="icon_cash_label">CASH</string>
+    <string name="adding_tab_label3">TRANSFER</string>
+
+    <string name="icon_restaurant_label">Restaurant</string>
+    <string name="icon_grocery_label">Grocery</string>
+    <string name="icon_transport_label">Transport</string>
+    <string name="icon_cash_label">Cash</string>
     <string name="icon_atm_label">ATM</string>
+    <string name="icon_salary_label">Salary</string>
+    <string name="icon_invest_label">Invest</string>
+    <string name="icon_special_label">Special</string>
+
+    <string name="title_activity_drawer">DrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="icon_entertain_label">Entertain</string>
+    <string name="icon_housing_label">Housing</string>
+    <string name="icon_split_label">Split</string>
 
 
 </resources>

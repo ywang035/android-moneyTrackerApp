@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Asset Type"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/dialogFragment_addAsset_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:checkedButton="@+id/default_radio">
+
+            <RadioButton
+                android:id="@+id/default_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Debit Card" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Credit Card" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Digital Payment" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bank Account/Cash" />
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Asset Name"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/dialogFragment_addAsset_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="enter a name" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Asset Balance"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/dialogFragment_addAsset_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="enter a number"
+            android:inputType="numberDecimal|numberSigned"
+             />
+
+
+        <TextView
+            android:id="@+id/dialogFragment_addAsset_limit_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Credit Limit"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/dialogFragment_addAsset_limit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="enter a number"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="numberDecimal" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/dialogFragment_addAsset_ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="Add it"
+                android:textColor="@color/colorAccent" />
+
+            <Button
+                android:id="@+id/dialogFragment_addAsset_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="Cancel"
+                android:textColor="@color/colorAccent" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</android.widget.RelativeLayout>

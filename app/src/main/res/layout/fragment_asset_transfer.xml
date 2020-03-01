@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:text="Date"/>
+
+        <Button
+            android:id="@+id/asset_transfer_datePickerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:drawablePadding="20dp"
+            android:gravity="left|center_vertical"
+            android:onClick="showDatePicker" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="From"
+            android:textStyle="bold"/>
+
+
+        <Spinner
+            android:id="@+id/asset_transfer_spinner_from"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="-15dp"
+            android:spinnerMode="dropdown">
+
+        </Spinner>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/asset_transfer_spinner_to"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="-15dp"
+            android:spinnerMode="dropdown">
+
+        </Spinner>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/dialogFragment_transferAsset_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:hint="enter a number"
+            android:inputType="numberDecimal"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/dialogFragment_transferAsset_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:hint="note of transfer"
+            android:inputType="text"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/dialogFragment_transferAsset_ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="Ok"
+                android:textColor="@color/colorAccent" />
+
+            <Button
+                android:id="@+id/dialogFragment_transferAsset_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="Cancel"
+                android:textColor="@color/colorAccent" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</android.widget.RelativeLayout>

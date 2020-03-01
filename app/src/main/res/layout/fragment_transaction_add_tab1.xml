@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.TransAddingTabFragment1">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="220dp"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp">
+
+            <TextView
+                android:id="@+id/textView_restaurant"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:textSize="8dp"
+                android:drawableTop="@drawable/icon_restaurant_gray"
+                android:text="@string/icon_restaurant_label"
+                />
+
+
+            <TextView
+                android:id="@+id/textView_grocery"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:textSize="8dp"
+                android:drawableTop="@drawable/icon_grocery_gray"
+                android:text="@string/icon_grocery_label"
+                />
+
+            <TextView
+                android:id="@+id/textView_transport"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:textSize="8dp"
+                android:drawableTop="@drawable/icon_transport_gray"
+                android:text="@string/icon_transport_label"
+                />
+
+            <TextView
+                android:id="@+id/textView_cash"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:textSize="8dp"
+                android:drawableTop="@drawable/icon_cash_gray"
+                android:text="@string/icon_cash_label"
+                />
+
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:layout_marginTop="20dp"
+            >
+
+            <TextView
+                android:id="@+id/textView_entertain"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:textSize="8dp"
+                android:drawableTop="@drawable/icon_entertain_gray"
+                android:text="@string/icon_entertain_label"
+                />
+
+
+            <TextView
+                android:id="@+id/textView_invest"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:textSize="8dp"
+                android:drawableTop="@drawable/icon_invest_gray"
+                android:text="@string/icon_invest_label"
+                />
+
+            <TextView
+                android:id="@+id/textView_housing"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:textSize="8dp"
+                android:drawableTop="@drawable/icon_housing_gray"
+                android:text="@string/icon_housing_label"
+                />
+
+            <TextView
+                android:id="@+id/textView_special"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:textSize="8dp"
+                android:drawableTop="@drawable/icon_special_gray"
+                android:text="@string/icon_special_label"
+                />
+
+
+        </TableRow>
+
+
+
+    </TableLayout>
+
+
+</RelativeLayout>

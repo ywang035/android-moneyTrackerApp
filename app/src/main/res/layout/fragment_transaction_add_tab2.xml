@@ -1,0 +1,106 @@
+<!--<?xml version="1.0" encoding="utf-8"?>--><!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:tools="http://schemas.android.com/tools"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--tools:context=".TransAddingTabFragment2">-->
+
+<!--&lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;--><!--<TextView--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--android:text="@string/hello_blank_fragment" />-->
+
+<!--</FrameLayout>-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.TransAddingTabFragment2">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="220dp"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp">
+
+            <TextView
+                android:id="@+id/textView_salary"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:textSize="8dp"
+                android:drawableTop="@drawable/icon_salary_gray"
+                android:text="@string/icon_salary_label"
+                />
+
+
+            <TextView
+                android:id="@+id/textView_invest"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:textSize="8dp"
+                android:drawableTop="@drawable/icon_invest_gray"
+                android:text="@string/icon_invest_label"
+                />
+
+            <TextView
+                android:id="@+id/textView_cash"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:textSize="8dp"
+                android:drawableTop="@drawable/icon_cash_gray"
+                android:text="@string/icon_cash_label"
+                />
+
+            <TextView
+                android:id="@+id/textView_split"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:textSize="8dp"
+                android:drawableTop="@drawable/icon_split_gray"
+                android:text="@string/icon_split_label"
+                 />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:layout_marginTop="20dp">
+
+
+            <TextView
+                android:id="@+id/textView_special"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:textSize="8dp"
+                android:drawableTop="@drawable/icon_special_gray"
+                android:text="@string/icon_special_label"
+                />
+
+        </TableRow>
+
+
+    </TableLayout>
+
+</RelativeLayout>

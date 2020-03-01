@@ -1,0 +1,154 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.TransAddingActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" />
+
+    <Button
+        android:id="@+id/button_dateInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="140dp"
+        android:background="@android:color/transparent"
+        android:drawableStart="@drawable/icon_date_black"
+        android:drawablePadding="20dp"
+        android:gravity="left|center_vertical"
+        android:onClick="showDatePicker" />
+
+    <Button
+        android:id="@+id/button_assetInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="253dp"
+        android:background="@android:color/transparent"
+        android:drawableStart="@drawable/icon_card_black"
+        android:drawablePadding="20dp"
+        android:gravity="left|center_vertical"
+        android:onClick="showBottomSheet"
+        android:text="Asset" />
+
+    <View
+        android:id="@+id/view_divider2"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="200dp"
+        android:background="@color/colorDivider" />
+
+    <View
+        android:id="@+id/view_divider1"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_alignTop="@+id/pager"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="122dp"
+        android:layout_marginBottom="474dp"
+        android:background="@color/colorDivider" />
+
+    <View
+        android:id="@+id/view_divider4"
+        android:layout_width="1dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="145dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/colorDivider" />
+
+    <View
+        android:id="@+id/view_divider3"
+        android:layout_width="1dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/colorDivider" />
+
+    <EditText
+        android:id="@+id/editText_dollarInput"
+        android:layout_width="224dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="11dp"
+        android:background="@null"
+        android:ems="10"
+        android:gravity="right"
+        android:hint="0.00"
+        android:imeOptions="actionDone"
+        android:inputType="numberDecimal"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editText_noteInput"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="154dp"
+        android:layout_marginEnd="9dp"
+        android:background="@null"
+        android:ems="10"
+        android:gravity="right"
+        android:hint="note of purchase"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/button_confirm"
+        android:layout_width="366dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorAccent"
+        android:onClick="sendToMain"
+        android:text="CONFIRM" />
+
+
+
+</RelativeLayout>
