@@ -492,6 +492,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Toast.makeText(this, "add book clicked", Toast.LENGTH_SHORT).show();
                 break;
 
+            case R.id.navi_filter:
+                drawerLayout.closeDrawer((int) Gravity.LEFT);
+                showFilterDialogFragmenrt();
+                break;
+
+
+            case R.id.navi_chart:
+                drawerLayout.closeDrawer((int) Gravity.LEFT);
+                showChartActivity();
+                break;
 
             case R.id.navi_asset:
                 drawerLayout.closeDrawer((int) Gravity.LEFT);
